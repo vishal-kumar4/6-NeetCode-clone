@@ -1,10 +1,14 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
+// const models=require('.../backend/')
+const models=require("../../backend/lib/courseLib")
+// await 
+clg(models.getAllCourses())
 
 function App() {
   const [count, setCount] = useState(0)
-  console.log("hello there")
+  // console.log("hello there")
 
   return (
     <div className="App">
