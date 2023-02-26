@@ -13,7 +13,6 @@ dotenv.config();
 const express=require('express')
 const app=express();
 
-
 // ⁡⁢⁣⁢to use static file like html css from frontend folder⁡⁡
 app.use(express.static("frontend"))
 
@@ -41,7 +40,7 @@ mongoose.connect(process.env.MONGO_CONNECTION_STRING,async (err)=>{
             const courses=await courseLib.getAllCourses()
             console.log(courses);
         app.listen(3000,()=>{
-            console.log(` = = = = = = > running at port ${3000}  < = = = = = = `)
+            console.log(` = = = = = = > running at port ${3000}  < = = =     = = = `)
         }); 
     }
 })
