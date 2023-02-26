@@ -8,7 +8,6 @@ app.get('/',(req,res)=>{
     res.sendFile(__dirname + "/frontend/index.html")
 });
 
-
 app.listen(3000,()=>{
     console.log(`running at port ${3000}`)
 }); 
