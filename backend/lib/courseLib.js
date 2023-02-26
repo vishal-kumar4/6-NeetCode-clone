@@ -4,6 +4,11 @@ module.exports.getAllCourses=async ()=>{
         return await courseModel.find({});
     }
     
+//with input
+module.exports.createCourse=async ()=>{
+    const course=new courseModel(courseInput)
+    await course.save();
+}
 
     //to create a test data if database is empty then it'll dump it 
     module.exports.createFirstCourse=async ()=>{
@@ -16,5 +21,9 @@ module.exports.getAllCourses=async ()=>{
             };
             const course=new courseModel(firstcourse);
             await course.save()
+        }
+
+        module.exports.updateCourse=async(courseId,updatedInput)=>{
+            await courseModel.findOneAndUpdate({_id:courseId},updatedInput)
         }
 }

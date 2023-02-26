@@ -2,9 +2,10 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 // const models=require('.../backend/')
-const models=require("../../backend/lib/courseLib")
+// import models from '../../backend/lib/courseLib'
+// const models=require("../../backend/lib/courseLib")
 // await 
-clg(models.getAllCourses())
+// clg(models.getAllCourses())
 
 function App() {
   const [count, setCount] = useState(0)
