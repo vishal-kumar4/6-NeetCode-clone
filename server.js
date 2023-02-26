@@ -1,16 +1,14 @@
 const express=require('express')
 const app=express();
 
-app.get('/',(req,res)=>{
-    res.send("Hello this is the root directory . . . . . .");
-});
+// ⁡⁢⁣⁢to use static file like html css from frontend folder⁡⁡
+app.use(express.static("frontend"))
 
-app.get('/myname',(req,res)=>{
-    // editedname=req.params.name
-    res.send("Vishal");
+app.get('/',(req,res)=>{
+    res.sendFile(__dirname + "/frontend/index.html")
 });
 
 
 app.listen(3000,()=>{
     console.log(`running at port ${3000}`)
-})
+});
