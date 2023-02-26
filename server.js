@@ -7,7 +7,7 @@ app.get('/',(req,res)=>{
 
 app.get('/myname',(req,res)=>{
     // editedname=req.params.name
-    res.send("Vishal kumar");
+    res.send("Vishal");
 });
 
 
